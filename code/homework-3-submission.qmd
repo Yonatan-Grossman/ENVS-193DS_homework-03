@@ -70,7 +70,10 @@ personal_summary #output the flextable
 
 ## a.
 
-The statistical test used was a Student's t-test. The response predictor variable was aspen location (Riparian vs. upland, and presence of logs vs. no logs) and the response variable was current annual growth (of the aspen).
+The statistical test used was a Student's t-test. The response predictor variable was aspen location (Riparian vs. upland) and the response variable was current annual growth (of the aspen).
+
+
+## b.
 
 ```{r}
 scrnsht <- image_read("C:/Users/16177/OneDrive/Pictures/Screenshots/Screenshot 2025-04-24 233738.png")
@@ -79,8 +82,12 @@ print(scrnsht)
 ```
 
 
-## b.
+This is the image I included in homework 2, which wasn't exactly the data visualization of the statistical test, but I'll critique it for visual clarity since otherwise I would just have to find another figure anyway.
 
-The image I included in homework 2 wasn't exactly the data visualization of the statistical test, but I'll critique this image for visual clarity here since otherwise I would just have to find another figure anyway.
+The authors did a pretty good job of responding their data. The x- and y-axis are properly labeled, the 4 trends are visually distinct and intuitively labeled in the legend, and there's a title. The predictions are visually distinct (dotted line) and the data points are provided. Also units were provided where necessary.
 
-The authors did a pretty good job of responding their data. The x- and y-axis are properly labeled, the 4 trends are visually distinct and  labeled in the legend, and there's a title. The predictions are visually distinct (dotted line) and the data points are provided. Two things I might change is writing "Fallen logs" or something instead of just "Logs" just because someone seeing this figure in isolation might think that it's somehow referencing a log scale (I don't think this is particularly important but it did briefly confuse me so it might be worth changing), and I'd also consider adding horizontal gridlines so it's easier to see the tree height, especially since the data is somewhat far from the y-axis due to the legend.
+## c.
+I think the authors did a pretty good job in regards to visual clutter, the actual data points are the only color on the whole chart (except the legend) which draws your eyes towards it. The essential items are included and the data points are made distinct without going overboard, and the legend is a grid to improve efficiency of space. On the whole there's not that much data on this chart, but I don't think you could remove much more without getting rid opf important elements.
+
+## d.
+I would recommend they use box and whisker plots with underlying jitterplots to represent the data. The x-axis would be site type, and have "riparian" and "upland" as options. The y-axis would be the current annual growth rate in cm/year. For both site types there would be a box and whisker plot showing the range, IQR, median, and outliers of the data for that site, plus a jitterplot (with height = 0) showing the actual data points themselves. The plot should have colors that are quite distinct from each other, and unique shapes should be chosen for the jitterplots. Horizontal gridlines should be included to make it easier to read the jitterplots. This would allow someone to easily at a glance see the differences in the growth rates between the sites using the boxplots, which would also help them see the range and general spread of the data. The jitterplot would let people still see the underlying data for more robustness.
