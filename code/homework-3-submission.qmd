@@ -43,5 +43,6 @@ ggplot(data_clean,
   labs (x = "Presence of a non-work stresser", y = "Instances of eating") #axis labels
 ```
 
-```
-
+# c.
+**Figure 1: Number of times I eat on days I have a non-work stresser and days I don't:**  
+Comparison of number of times I eat on days I'm stressed for a reason unrelated to work (*n* = 19) and days where I'm not (*n* = 9) The boxplots represent median values, IQR, and spread of observations of number of times I ate food those days. Colors represent the location (black = stressor present, red = no stressor). The triangles represent individual observations
