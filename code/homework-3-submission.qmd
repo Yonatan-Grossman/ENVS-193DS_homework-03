@@ -17,3 +17,8 @@ library(flextable)
 library(janitor)
 ```
 
+
+## Problem 1
+
+# a.
+I could calculate the mean number of times I ate and compare it from days where there is and isn't a non-work stresser, as I find that when I'm stressed I tend to work more and spend less time eating so I think the mean number of times I eat will be lower for days I'm stressed.
