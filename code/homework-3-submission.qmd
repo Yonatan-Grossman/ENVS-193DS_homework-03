@@ -15,6 +15,7 @@ library(tidyverse) #read in packages
 library(here)
 library(flextable)
 library(janitor)
+library(dplyr)
 ```
 
 
@@ -45,4 +46,23 @@ ggplot(data_clean,
 
 # c.
 **Figure 1: Number of times I eat on days I have a non-work stresser and days I don't:**  
-Comparison of number of times I eat on days I'm stressed for a reason unrelated to work (*n* = 19) and days where I'm not (*n* = 9) The boxplots represent median values, IQR, and spread of observations of number of times I ate food those days. Colors represent the location (black = stressor present, red = no stressor). The triangles represent individual observations
+Comparison of number of times I eat on days I'm stressed for a reason unrelated to work (*n* = 19) and days where I'm not (*n* = 9) The boxplots represent median values, IQR, and spread of observations of number of times I ate food those days. Colors represent the location (black = stressor present, red = no stressor). The triangles represent individual observations.
+
+# d.
+```{r}
+personal_summary <- data_clean |>  
+  group_by(presence_of_a_non_work_stressor_y_n)  |>  
+  summarise(
+    median = median(instances_of_eating), #calculating the following
+    n = length(instances_of_eating),
+    IQR = IQR(instances_of_eating),
+    min = min(instances_of_eating),
+    max = max(instances_of_eating),
+    .groups = "drop"
+  ) |> 
+  rename("non-work stressor?" = presence_of_a_non_work_stressor_y_n) |> #renaming the titles 
+  flextable() |>  #make a flextable 
+  set_table_properties(layout = "autofit")
+personal_summary #output the flextable
+```
+
