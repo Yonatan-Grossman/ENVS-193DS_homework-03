@@ -21,4 +21,27 @@ library(janitor)
 ## Problem 1
 
 # a.
-I could calculate the mean number of times I ate and compare it from days where there is and isn't a non-work stresser, as I find that when I'm stressed I tend to work more and spend less time eating so I think the mean number of times I eat will be lower for days I'm stressed.
+I could make side-by-side box and whisker plots comparing the number of times I ate on days where there is and isn't a non-work stresser. I find that when I'm stressed I tend to work more and spend less time eating so I think the mediam number of times I ate when stressed will be lower, and I think the range will also be lower since the more stressed I am the overall fewer opportunities I give myself to eat.
+
+# b.
+```{r}
+personal_data <- read.csv("C:/Users/16177/193 DS/ES 193DS/git/ENVS-193DS_homework_3/ENVS-193DS_homework-03/data/Personal data - Sheet1.csv") #reading in the personal data
+
+data_clean <- personal_data |> #makes a new object called data_clean which is just the data from personal_data
+  clean_names() #cleans the data
+
+
+ggplot(data_clean,
+       aes(x = presence_of_a_non_work_stressor_y_n,
+           y = instances_of_eating,
+           color = presence_of_a_non_work_stressor_y_n,
+           shape = presence_of_a_non_work_stressor_y_n)) +
+  geom_boxplot(show.legend = FALSE) + #boxplot
+  geom_jitter(height = 0.1, width = 0.2, show.legend = FALSE) + #jitterplot
+  scale_color_manual(values = c("y" = "black", "n" = "red3")) + #custom colors
+  scale_shape_manual(values = c("y" = 6, "n" = 2)) + #custom shapes
+  labs (x = "Presence of a non-work stresser", y = "Instances of eating") #axis labels
+```
+
+```
+
