@@ -19,12 +19,12 @@ library(dplyr)
 ```
 
 
-## Problem 1
+# Problem 1
 
-# a.
+## a.
 I could make side-by-side box and whisker plots comparing the number of times I ate on days where there is and isn't a non-work stresser. I find that when I'm stressed I tend to work more and spend less time eating so I think the mediam number of times I ate when stressed will be lower, and I think the range will also be lower since the more stressed I am the overall fewer opportunities I give myself to eat.
 
-# b.
+## b.
 ```{r}
 personal_data <- read.csv("C:/Users/16177/193 DS/ES 193DS/git/ENVS-193DS_homework_3/ENVS-193DS_homework-03/data/Personal data - Sheet1.csv") #reading in the personal data
 
@@ -44,11 +44,11 @@ ggplot(data_clean,
   labs (x = "Presence of a non-work stresser", y = "Instances of eating") #axis labels
 ```
 
-# c.
+## c.
 **Figure 1: Number of times I eat on days I have a non-work stresser and days I don't:**  
 Comparison of number of times I eat on days I'm stressed for a reason unrelated to work (*n* = 19) and days where I'm not (*n* = 9) The boxplots represent median values, IQR, and spread of observations of number of times I ate food those days. Colors represent the location (black = stressor present, red = no stressor). The triangles represent individual observations.
 
-# d.
+## d.
 ```{r}
 personal_summary <- data_clean |>  
   group_by(presence_of_a_non_work_stressor_y_n)  |>  
@@ -66,3 +66,21 @@ personal_summary <- data_clean |>
 personal_summary #output the flextable
 ```
 
+# Problem 3
+
+## a.
+
+The statistical test used was a Student's t-test. The response predictor variable was aspen location (Riparian vs. upland, and presence of logs vs. no logs) and the response variable was current annual growth (of the aspen).
+
+```{r}
+scrnsht <- image_read("C:/Users/16177/OneDrive/Pictures/Screenshots/Screenshot 2025-04-24 233738.png")
+
+print(scrnsht)
+```
+
+
+## b.
+
+The image I included in homework 2 wasn't exactly the data visualization of the statistical test, but I'll critique this image for visual clarity here since otherwise I would just have to find another figure anyway.
+
+The authors did a pretty good job of responding their data. The x- and y-axis are properly labeled, the 4 trends are visually distinct and  labeled in the legend, and there's a title. The predictions are visually distinct (dotted line) and the data points are provided. Two things I might change is writing "Fallen logs" or something instead of just "Logs" just because someone seeing this figure in isolation might think that it's somehow referencing a log scale (I don't think this is particularly important but it did briefly confuse me so it might be worth changing), and I'd also consider adding horizontal gridlines so it's easier to see the tree height, especially since the data is somewhat far from the y-axis due to the legend.
