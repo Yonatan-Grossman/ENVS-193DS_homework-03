@@ -1,0 +1,19 @@
+---
+title: "homework-3-submission"
+format: docx
+editor: visual
+date: 5/28/25
+author: Yonatan Grossman
+---
+
+Here's the link
+
+https://github.com/Yonatan-Grossman/ENVS-193DS_homework-03.git
+
+```{r}
+library(tidyverse) #read in packages
+library(here)
+library(flextable)
+library(janitor)
+```
+
