@@ -66,6 +66,13 @@ personal_summary <- data_clean |>
 personal_summary #output the flextable
 ```
 
+# Problem 2
+
+## a.
+
+I think an affective visualization for my personal data could be a a photo or sculpture type thing where food or food wrappers are used as the individual data points for a jitterplot, and then using food boxes and things like uncooked pasta to make the outline for the boxplots. I could use foods of generally lighter colors on a lighter background for the non-stressed side, and then food that's generally darker for the stressed side, just to give a visual indication of the difference. I really like the idea of using food for this because the dcata points represent times I ate, meaning the data points for this visualization would be represented by the thing they're represented. I just need to experiment a little bit to find a good way of distinguishing the stressed side from the non-stressed side. 
+
+
 # Problem 3
 
 ## a.
