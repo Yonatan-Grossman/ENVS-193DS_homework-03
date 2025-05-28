@@ -16,6 +16,7 @@ library(here)
 library(flextable)
 library(janitor)
 library(dplyr)
+library(magick)
 ```
 
 
@@ -70,7 +71,22 @@ personal_summary #output the flextable
 
 ## a.
 
-I think an affective visualization for my personal data could be a a photo or sculpture type thing where food or food wrappers are used as the individual data points for a jitterplot, and then using food boxes and things like uncooked pasta to make the outline for the boxplots. I could use foods of generally lighter colors on a lighter background for the non-stressed side, and then food that's generally darker for the stressed side, just to give a visual indication of the difference. I really like the idea of using food for this because the dcata points represent times I ate, meaning the data points for this visualization would be represented by the thing they're represented. I just need to experiment a little bit to find a good way of distinguishing the stressed side from the non-stressed side. 
+I think an affective visualization for my personal data could be a a photo or sculpture type thing where food or food wrappers are used as the individual data points for a jitterplot, and then using food boxes and things like uncooked pasta to make the outline for the boxplots. I could use foods of generally lighter colors on a lighter background for the non-stressed side, and then food that's generally darker for the stressed side, just to give a visual indication of the difference. I just need to experiment a little bit to find a good way of distinguishing the stressed side from the non-stressed side, and a specific way of showing outliers as distinct from the jitter data points
+
+## b.
+
+```{r}
+sketch <- image_read("C:/Users/16177/193 DS/ES 193DS/git/ENVS-193DS_homework_3/ENVS-193DS_homework-03/WhatsApp Image 2025-05-28 at 2.57.12 PM.jpeg")
+
+sketch_scaled <- image_scale(sketch, "800")
+
+print(sketch)
+```
+
+## c.
+
+## d.
+
 
 
 # Problem 3
@@ -84,6 +100,7 @@ The statistical test used was a Student's t-test. The response predictor variabl
 
 ```{r}
 scrnsht <- image_read("C:/Users/16177/OneDrive/Pictures/Screenshots/Screenshot 2025-04-24 233738.png")
+
 
 print(scrnsht)
 ```
