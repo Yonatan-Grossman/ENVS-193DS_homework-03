@@ -3,7 +3,7 @@ title: "homework-3-submission"
 format:
   html:
     toc: true
-    toc-floating: true
+    toc_float: true
 editor: visual
 date: 5/28/25
 author: Yonatan Grossman
