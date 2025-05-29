@@ -28,7 +28,7 @@ library(here)
 # Problem 1
 
 ## a.
-I could make side-by-side box and whisker plots comparing the number of times I ate on days where there is and isn't a non-work stresser. I find that when I'm stressed I tend to work more and spend less time eating so I think the median number of times I ate when stressed will be lower, and I think the range will also be lower since the more stressed I am the overall fewer opportunities I give myself to eat.
+I could make side-by-side box and whisker plots with a jitterplot comparing the number of times I ate on days where there is and isn't a non-work stresser. I find that when I'm stressed I tend to work more and spend less time eating so I think the median number of times I ate when stressed will be lower, and I think the range will also be lower since the more stressed I am the overall fewer opportunities I give myself to eat.
 
 ## b.
 ```{r}
