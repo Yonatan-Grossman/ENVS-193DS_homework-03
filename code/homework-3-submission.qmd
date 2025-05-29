@@ -1,6 +1,6 @@
 ---
 title: "homework-3-submission"
-format: docx
+format: html
 editor: visual
 date: 5/28/25
 author: Yonatan Grossman
