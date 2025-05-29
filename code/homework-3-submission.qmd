@@ -36,7 +36,7 @@ data_clean <- personal_data |> #makes a new object called data_clean which is ju
 ggplot(data_clean,
        aes(x = presence_of_a_non_work_stressor_y_n,
            y = instances_of_eating,
-           color = presence_of_a_non_work_stressor_y_n,
+           color = presence_of_a_non_work_stressor_y_n, #setting axes titles, and letting me manually choose the color and shapes
            shape = presence_of_a_non_work_stressor_y_n)) +
   geom_boxplot(show.legend = FALSE) + #boxplot
   geom_jitter(height = 0.1, width = 0.2, show.legend = FALSE) + #jitterplot
@@ -76,14 +76,23 @@ I think an affective visualization for my personal data could be a a photo or sc
 ## b.
 
 ```{r}
-sketch <- image_read("C:/Users/16177/193 DS/ES 193DS/git/ENVS-193DS_homework_3/ENVS-193DS_homework-03/WhatsApp Image 2025-05-28 at 2.57.12 PM.jpeg")
+sketch <- image_read("C:/Users/16177/193 DS/ES 193DS/git/ENVS-193DS_homework_3/ENVS-193DS_homework-03/WhatsApp Image 2025-05-28 at 2.57.12 PM.jpeg") #loading in the photo
 
-sketch_scaled <- image_scale(sketch, "800")
+sketch_scaled <- image_scale(sketch, "800") #scaling the photo
 
-print(sketch)
+print(sketch_scaled) #print photo
 ```
 
 ## c.
+
+```{r}
+draft <- image_read("C:/Users/16177/193 DS/ES 193DS/git/ENVS-193DS_homework_3/ENVS-193DS_homework-03/WhatsApp Image 2025-05-28 at 9.01.04 PM.jpeg") #loading in the photo
+
+draft_scaled <- image_scale(draft, "800") #scaling the photo
+
+print(draft_scaled) #print photo
+```
+
 
 ## d.
 
