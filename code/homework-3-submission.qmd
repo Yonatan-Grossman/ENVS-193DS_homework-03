@@ -18,6 +18,7 @@ library(janitor)
 library(dplyr)
 library(magick)
 library(ggplot2)
+library(here)
 ```
 
 
@@ -28,7 +29,9 @@ I could make side-by-side box and whisker plots comparing the number of times I 
 
 ## b.
 ```{r}
-personal_data <- read.csv("data/Personal data - Sheet1.csv") #reading in the personal data
+setwd(here::here())
+
+personal_data <- read.csv("data/personal_data_sheet1.csv") #reading in the personal data
 
 data_clean <- personal_data |> #makes a new object called data_clean which is just the data from personal_data
   clean_names() #cleans the data
@@ -77,17 +80,17 @@ I think an affective visualization for my personal data could be a a photo or sc
 ## b.
 
 ```{r}
-sketch <- image_read("WhatsApp Image 2025-05-28 at 2.57.12 PM.jpeg") #loading in the photo
+sketch <- image_read("../sketch_image.jpeg") #find the photo
 
-sketch_scaled <- image_scale(sketch, "800") #scaling the photo
+sketch_scaled <- image_scale(sketch, "800") #scale it
+print(sketch_scaled) #print it
 
-print(sketch_scaled) #print photo
 ```
 
 ## c.
 
 ```{r}
-draft <- image_read("WhatsApp Image 2025-05-28 at 9.01.04 PM.jpeg") #loading in the photo
+draft <- image_read("../WhatsApp Image 2025-05-28 at 9.01.04 PM.jpeg") #loading in the photo
 
 draft_scaled <- image_scale(draft, "800") #scaling the photo
 
@@ -111,7 +114,7 @@ The statistical test used was a Student's t-test. The response predictor variabl
 ## b.
 
 ```{r}
-scrnsht <- image_read("C:/Users/16177/OneDrive/Pictures/Screenshots/Screenshot 2025-04-24 233738.png")
+scrnsht <- image_read("../Screenshot 2025-04-24 233738.png")
 
 
 print(scrnsht)
