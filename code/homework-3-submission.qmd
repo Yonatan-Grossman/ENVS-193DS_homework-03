@@ -1,6 +1,9 @@
 ---
 title: "homework-3-submission"
-format: html
+format:
+  html:
+    toc: true
+    toc-floating: true
 editor: visual
 date: 5/28/25
 author: Yonatan Grossman
