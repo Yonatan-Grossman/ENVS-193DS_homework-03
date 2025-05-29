@@ -23,7 +23,7 @@ library(magick)
 # Problem 1
 
 ## a.
-I could make side-by-side box and whisker plots comparing the number of times I ate on days where there is and isn't a non-work stresser. I find that when I'm stressed I tend to work more and spend less time eating so I think the mediam number of times I ate when stressed will be lower, and I think the range will also be lower since the more stressed I am the overall fewer opportunities I give myself to eat.
+I could make side-by-side box and whisker plots comparing the number of times I ate on days where there is and isn't a non-work stresser. I find that when I'm stressed I tend to work more and spend less time eating so I think the median number of times I ate when stressed will be lower, and I think the range will also be lower since the more stressed I am the overall fewer opportunities I give myself to eat.
 
 ## b.
 ```{r}
@@ -36,7 +36,7 @@ data_clean <- personal_data |> #makes a new object called data_clean which is ju
 ggplot(data_clean,
        aes(x = presence_of_a_non_work_stressor_y_n,
            y = instances_of_eating,
-           color = presence_of_a_non_work_stressor_y_n, #setting axes titles, and letting me manually choose the color and shapes
+           color = presence_of_a_non_work_stressor_y_n, #setting axes and letting me manually choose the color and shapes
            shape = presence_of_a_non_work_stressor_y_n)) +
   geom_boxplot(show.legend = FALSE) + #boxplot
   geom_jitter(height = 0.1, width = 0.2, show.legend = FALSE) + #jitterplot
@@ -96,6 +96,8 @@ print(draft_scaled) #print photo
 
 ## d.
 
+My pieces is showing the boxplot and underlying data (as a jitterplot) of the number of times I eat a day on days when I have a non-work-related stresser compared to days where I don't. I though since each data point is showing a time that I ate, it would be cool to use food as the data points since it means each data point is represented by the thing it literally represents. The shaded side is supposed to represent the stressed side, while the lighter side is the one without stress, although I think I could make it a bit clearer (also the pink ramen packets are the boxplot outliers, which I want to try and make clearer too). I had no specific artist who inspired me, I was just trying to think of a cool way of representing my data that was relevant to the specific question I was trying to answer. The work itself is made all from food inside my dorm that I personally own (except for the ramen packets which are outliers, both in the sense that I don't own them and the fact that they show boxplot outliers), and the boxplot parts are made out of cardboard and spaghetti. The spaghetti is the whiskers of the boxplot and the cardboard is the main part, since the data is discrete and pretty clustered around specific values it doesn't really look like a box and whisker plot but it is. I made this by carefully referencing the boxplots I made earlier in this document and by collecting as much variety of food as I could before setting it outside on the patio and arrainging it according to the aforementioned boxplots. I then used an extension cord to bring my lamp close to the food and angled it so the light was aimed mostly at one side and the shadow was on the stressed side, and then I took the photo from as high as I could while still holding the lamp steady.
+
 
 
 # Problem 3
@@ -120,7 +122,7 @@ This is the image I included in homework 2, which wasn't exactly the data visual
 The authors did a pretty good job of responding their data. The x- and y-axis are properly labeled, the 4 trends are visually distinct and intuitively labeled in the legend, and there's a title. The predictions are visually distinct (dotted line) and the data points are provided. Also units were provided where necessary.
 
 ## c.
-I think the authors did a pretty good job in regards to visual clutter, the actual data points are the only color on the whole chart (except the legend) which draws your eyes towards it. The essential items are included and the data points are made distinct without going overboard, and the legend is a grid to improve efficiency of space. On the whole there's not that much data on this chart, but I don't think you could remove much more without getting rid opf important elements.
+I think the authors did a pretty good job in regards to visual clutter, the actual data points are the only color on the whole chart (except the legend) which draws your eyes towards it. The essential items are included and the data points are made distinct without going overboard, and the legend is a grid to improve efficiency of space. On the whole there's not that much data on this chart, but I don't think you could remove much more without getting rid of important elements.
 
 ## d.
 I would recommend they use box and whisker plots with underlying jitterplots to represent the data. The x-axis would be site type, and have "riparian" and "upland" as options. The y-axis would be the current annual growth rate in cm/year. For both site types there would be a box and whisker plot showing the range, IQR, median, and outliers of the data for that site, plus a jitterplot (with height = 0) showing the actual data points themselves. The plot should have colors that are quite distinct from each other, and unique shapes should be chosen for the jitterplots. Horizontal gridlines should be included to make it easier to read the jitterplots. This would allow someone to easily at a glance see the differences in the growth rates between the sites using the boxplots, which would also help them see the range and general spread of the data. The jitterplot would let people still see the underlying data for more robustness.
